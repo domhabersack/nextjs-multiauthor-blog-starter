@@ -1,16 +1,247 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
-a {
-  color: inherit;
+a, a:visited {
+  color: rgb(37, 99, 235);
   text-decoration: none;
 }
 
-* {
+body {
+  background-color: rgb(249, 250, 251);
+  color: rgba(75, 85, 99);
+  margin: 0;
+  padding: 0;
+}
+
+html {
   box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h1 {
+  color: rgba(55, 65, 81);
+  font-size: 1.875rem;
+  font-weight: bold;
+  line-height: 2.25rem;
+  margin: 0 0 0.75rem;
+}
+
+h2 {
+  color: rgba(55, 65, 81);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin: 0 0 0.25rem;
+}
+
+header {
+  background-color: rgba(243, 244, 246);
+  margin-bottom: 1.5rem;
+  padding: 1rem 0;
+}
+
+header nav {
+  margin: 0 auto;
+  max-width: 32rem;
+  padding: 0 2rem;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header li {}
+
+header li + li {
+  margin-left: 1.25rem;
+}
+
+header a, header a:visited {
+  color: rgba(55, 65, 81);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 32rem;
+  padding: 0 2rem 4rem;
+}
+
+.author {}
+
+.author > h2 {}
+
+.author > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.author > ul > li {
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.author > ul > li::before {
+  background: rgba(55, 65, 81);
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 0.25rem;
+  position: absolute;
+  margin-top: -0.125rem;
+  top: 50%;
+  left: 0.125rem;
+  width: 0.25rem;
+}
+
+.author > ul > li + li {
+  margin-top: 0.25rem;
+}
+
+.author > ul > li > a {
+  font-size: 1rem;
+}
+
+.author > img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.authors {}
+
+.authors > div {}
+
+.authors > div + div {
+  margin-top: 2rem;
+}
+
+.authors > div > h2 {}
+
+.authors > div > img {
+  border-radius: 50%;
+}
+
+.authors > div > p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.authors > div > a {
+  font-size: 14px;
+}
+
+.post {}
+
+.post > div {
+  align-items: center;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.post > div:last-of-type {
+  display: block;
+}
+
+.post > div > img {
+  border-radius: 50%;
+}
+
+.post > div > div {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-left: 0.5rem;
+}
+
+.post > div > div > span {
+  color: rgba(75, 85, 99);
+  display: block;
+  font-size: 0.75rem;
+}
+
+.post > div > div > strong {
+  color: rgba(75, 85, 99);
+  font-size: 0.75rem;
+  font-weight: medium;
+  margin-bottom: 0.125rem;
+}
+
+.post p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+.post p + p {
+  margin-top: 1.25rem;
+}
+
+.posts {}
+
+.posts > article {}
+
+.posts > article > a {
+  font-size: 14px;
+}
+
+.posts > article > div {
+  align-items: center;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.posts > article > div > img {
+  border-radius: 50%;
+}
+
+.posts > article > div > div {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-left: 0.5rem;
+}
+
+.posts > article > div > div > span {
+  color: rgba(75, 85, 99);
+  display: block;
+  font-size: 0.75rem;
+}
+
+.posts > article > div > div > strong {
+  color: rgba(75, 85, 99);
+  font-size: 0.75rem;
+  font-weight: medium;
+  margin-bottom: 0.125rem;
+}
+
+.posts > article > h2 {
+  margin-bottom: 0.125rem;
+}
+
+.posts > article > p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+.posts > article > span {
+  color: rgba(75, 85, 99);
+  display: block;
+  font-size: 0.75rem;
+  margin: 0 0 0.5rem;
+}
+
+.posts > article + article {
+  margin-top: 3rem;
 }
