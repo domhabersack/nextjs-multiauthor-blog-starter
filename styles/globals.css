@@ -109,7 +109,7 @@ main {
   font-size: 1rem;
 }
 
-.author > img {
+.author img {
   border-radius: 50%;
   margin-bottom: 1rem;
 }
@@ -124,7 +124,7 @@ main {
 
 .authors > div > h2 {}
 
-.authors > div > img {
+.authors > div img {
   border-radius: 50%;
 }
 
@@ -150,7 +150,7 @@ main {
   display: block;
 }
 
-.post > div > img {
+.post > div img {
   border-radius: 50%;
 }
 
@@ -200,7 +200,7 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.posts > article > div > img {
+.posts > article > div img {
   border-radius: 50%;
 }
 

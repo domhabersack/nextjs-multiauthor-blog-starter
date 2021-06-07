@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { getAllPosts, getAuthorBySlug, getPostBySlug } from '../../lib/api'
@@ -8,7 +9,7 @@ export default function Post({ post }) {
       <h1>{post.title}</h1>
 
       <div>
-        <img src={post.author.profilePictureUrl} height="40" width="40" />
+        <Image alt={post.author.name} src={post.author.profilePictureUrl} height="40" width="40" />
 
         <div>
           <strong>
