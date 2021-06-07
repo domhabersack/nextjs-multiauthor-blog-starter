@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { getAllAuthors, getAllPosts } from '../../lib/api'
 
 export default function Authors({ authors }) {
@@ -8,16 +10,18 @@ export default function Authors({ authors }) {
       {authors.map(author => (
         <div key={author.slug}>
           <h2>
-            <a href={author.permalink}>
-              {author.name}
-            </a>
+            <Link href={author.permalink}>
+              <a>{author.name}</a>
+            </Link>
           </h2>
 
           <img src={author.profilePictureUrl} height="80" width="80" />
 
           <p>{author.posts.length} post(s)</p>
 
-          <a href={author.permalink}>Go to profile →</a>
+          <Link href={author.permalink}>
+            <a>Go to profile →</a>
+          </Link>
         </div>
       ))}
     </div>

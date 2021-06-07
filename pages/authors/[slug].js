@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { getAllAuthors, getAllPosts, getAuthorBySlug } from '../../lib/api'
 
 export default function Author({ author }) {
@@ -12,9 +14,9 @@ export default function Author({ author }) {
       <ul>
         {author.posts.map(post => (
           <li key={post.slug}>
-            <a href={post.permalink}>
-              {post.title}
-            </a>
+            <Link href={post.permalink}>
+              <a>{post.title}</a>
+            </Link>
           </li>
         ))}
       </ul>

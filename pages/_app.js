@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -7,15 +9,21 @@ function MyApp({ Component, pageProps }) {
         <nav>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
             </li>
 
             <li>
-              <a href="/posts">Posts</a>
+              <Link href="/posts">
+                <a>Posts</a>
+              </Link>
             </li>
 
             <li>
-              <a href="/authors">Authors</a>
+              <Link href="/authors">
+                <a>Authors</a>
+              </Link>
             </li>
           </ul>
         </nav>

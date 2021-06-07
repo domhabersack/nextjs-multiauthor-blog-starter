@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { getAllPosts, getAuthorBySlug, getPostBySlug } from '../../lib/api'
 
 export default function Post({ post }) {
@@ -9,7 +11,12 @@ export default function Post({ post }) {
         <img src={post.author.profilePictureUrl} height="40" width="40" />
 
         <div>
-          <strong><a href={post.author.permalink}>{post.author.name}</a></strong>
+          <strong>
+            <Link href={post.author.permalink}>
+              <a>{post.author.name}</a>
+            </Link>
+          </strong>
+
           <span>{post.createdAt}</span>
         </div>
       </div>
