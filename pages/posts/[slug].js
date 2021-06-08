@@ -4,6 +4,12 @@ import Link from 'next/link'
 import { getAllPosts, getAuthorBySlug, getPostBySlug } from '../../lib/api'
 
 export default function Post({ post }) {
+  const prettyDate = new Date(post.createdAt).toLocaleString('en-US', {
+    month: 'short',
+    day: '2-digit',
+    year: 'numeric',
+  })
+
   return (
     <div className="post">
       <h1>{post.title}</h1>
@@ -18,7 +24,7 @@ export default function Post({ post }) {
             </Link>
           </strong>
 
-          <span>{post.createdAt}</span>
+          <time dateTime={post.createdAt}>{prettyDate}</time>
         </div>
       </div>
 

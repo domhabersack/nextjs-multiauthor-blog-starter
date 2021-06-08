@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import '../styles/globals.css'
 
-function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
     <>
       <header>
@@ -35,5 +35,3 @@ function MyApp({ Component, pageProps }) {
     </>
   )
 }
-
-export default MyApp

@@ -163,7 +163,7 @@ main {
   margin-left: 0.5rem;
 }
 
-.post > div > div > span {
+.post > div > div > time {
   color: rgba(75, 85, 99);
   display: block;
   font-size: 0.75rem;
@@ -213,7 +213,7 @@ main {
   margin-left: 0.5rem;
 }
 
-.posts > article > div > div > span {
+.posts > article > div > div > time {
   color: rgba(75, 85, 99);
   display: block;
   font-size: 0.75rem;

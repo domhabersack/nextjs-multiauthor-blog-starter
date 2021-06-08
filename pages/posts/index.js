@@ -8,30 +8,38 @@ export default function Posts({ posts }) {
     <div className="posts">
       <h1>Posts</h1>
 
-      {posts.map(post => (
-        <article key={post.slug}>
-          <h2>
-            <Link href={post.permalink}>
-              <a>{post.title}</a>
-            </Link>
-          </h2>
+      {posts.map(post => {
+        const prettyDate = new Date(post.createdAt).toLocaleString('en-US', {
+          month: 'short',
+          day: '2-digit',
+          year: 'numeric',
+        })
 
-          <p>{post.excerpt}</p>
+        return (
+          <article key={post.slug}>
+            <h2>
+              <Link href={post.permalink}>
+                <a>{post.title}</a>
+              </Link>
+            </h2>
 
-          <div>
-            <Image alt={post.author.name} src={post.author.profilePictureUrl} height="40" width="40" />
+            <p>{post.excerpt}</p>
 
             <div>
-              <strong>{post.author.name}</strong>
-              <span>{post.createdAt}</span>
-            </div>
-          </div>
+              <Image alt={post.author.name} src={post.author.profilePictureUrl} height="40" width="40" />
 
-          <Link href={post.permalink}>
-            <a>Read more →</a>
-          </Link>
-        </article>
-      ))}
+              <div>
+                <strong>{post.author.name}</strong>
+                <time dateTime={post.createdAt}>{prettyDate}</time>
+              </div>
+            </div>
+
+            <Link href={post.permalink}>
+              <a>Read more →</a>
+            </Link>
+          </article>
+        )
+      })}
     </div>
   )
 }
