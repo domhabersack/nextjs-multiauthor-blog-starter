@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import '../styles/globals.css'
+import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }) {
   return (
@@ -13,13 +13,6 @@ export default function App({ Component, pageProps }) {
                 <a>Home</a>
               </Link>
             </li>
-
-            <li>
-              <Link href="/posts">
-                <a>Posts</a>
-              </Link>
-            </li>
-
             <li>
               <Link href="/authors">
                 <a>Authors</a>
@@ -28,7 +21,6 @@ export default function App({ Component, pageProps }) {
           </ul>
         </nav>
       </header>
-
       <main>
         <Component {...pageProps} />
       </main>
