@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { getAllAuthors, getAllPosts, getAuthorBySlug } from '../../lib/api'
+import { getAllAuthors, getAllPosts, getAuthorBySlug } from '@/lib/api'
 
 export default function Author({ author }) {
   return (
