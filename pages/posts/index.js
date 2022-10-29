@@ -19,14 +19,14 @@ export default function Posts({ posts }) {
           <article key={post.slug}>
             <h2>
               <Link href={post.permalink}>
-                <a>{post.title}</a>
+                {post.title}
               </Link>
             </h2>
 
             <p>{post.excerpt}</p>
 
             <div>
-              <Image alt={post.author.name} src={post.author.profilePictureUrl} height="40" width="40" />
+              <Image alt={post.author.name} src={post.author.profilePictureUrl} height={40} width={40} />
 
               <div>
                 <strong>{post.author.name}</strong>
@@ -35,7 +35,7 @@ export default function Posts({ posts }) {
             </div>
 
             <Link href={post.permalink}>
-              <a>Read more →</a>
+              Read more →
             </Link>
           </article>
         )

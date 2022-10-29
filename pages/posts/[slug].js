@@ -15,12 +15,12 @@ export default function Post({ post }) {
       <h1>{post.title}</h1>
 
       <div>
-        <Image alt={post.author.name} src={post.author.profilePictureUrl} height="40" width="40" />
+        <Image alt={post.author.name} src={post.author.profilePictureUrl} height={40} width={40} />
 
         <div>
           <strong>
             <Link href={post.author.permalink}>
-              <a>{post.author.name}</a>
+              {post.author.name}
             </Link>
           </strong>
 

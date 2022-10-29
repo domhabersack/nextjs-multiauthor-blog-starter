@@ -8,7 +8,7 @@ export default function Author({ author }) {
     <div className="author">
       <h1>{author.name}</h1>
 
-      <Image alt={author.name} src={author.profilePictureUrl} height="120" width="120" />
+      <Image alt={author.name} src={author.profilePictureUrl} height={120} width={120} />
 
       <h2>Posts</h2>
 
@@ -16,7 +16,7 @@ export default function Author({ author }) {
         {author.posts.map(post => (
           <li key={post.slug}>
             <Link href={post.permalink}>
-              <a>{post.title}</a>
+              {post.title}
             </Link>
           </li>
         ))}
