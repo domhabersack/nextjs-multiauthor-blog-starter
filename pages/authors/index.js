@@ -12,16 +12,16 @@ export default function Authors({ authors }) {
         <div key={author.slug}>
           <h2>
             <Link href={author.permalink}>
-              <a>{author.name}</a>
+              {author.name}
             </Link>
           </h2>
 
-          <Image alt={author.name} src={author.profilePictureUrl} height="80" width="80" />
+          <Image alt={author.name} src={author.profilePictureUrl} height={80} width={80} />
 
           <p>{author.posts.length} post(s)</p>
 
           <Link href={author.permalink}>
-            <a>Go to profile →</a>
+            Go to profile →
           </Link>
         </div>
       ))}

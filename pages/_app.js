@@ -10,19 +10,19 @@ export default function App({ Component, pageProps }) {
           <ul>
             <li>
               <Link href="/">
-                <a>Home</a>
+                Home
               </Link>
             </li>
 
             <li>
               <Link href="/posts">
-                <a>Posts</a>
+                Posts
               </Link>
             </li>
 
             <li>
               <Link href="/authors">
-                <a>Authors</a>
+                Authors
               </Link>
             </li>
           </ul>
